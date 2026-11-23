@@ -1,5 +1,4 @@
-# never commit private keys generated on the machine
-smo-oam/solution/o1-ofhmp-interfaces/**/*.key
+# never commit cluster credentials
 *.kubeconfig
 kubeconfig*
 .kube/

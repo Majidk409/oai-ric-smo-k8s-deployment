@@ -21,15 +21,18 @@ monitoring stack, the O-RAN SC Near-RT RIC and the O-RAN SC SMO OAM.
 - **The OAI source tree** (`~/icdcn`, 2.2 GB), **UERANSIM source**, and the older RIC copy
   `~/oran-sc-ric`. These are upstream projects; clone them from their own repos.
 - **The kubeconfig** (`~/.kube/config`): it holds cluster credentials.
-- **Private keys generated on the machine** (`smo-oam/solution/o1-ofhmp-interfaces/**/*.key`).
-  Regenerate them with the `openssl` configs in that folder.
 
 ## Notes on credentials in these files
 
-All of them are **public defaults** of the upstream projects, not lab secrets:
+Apart from the lab-generated test keys below, all of them are **public defaults** of the upstream
+projects:
 - MySQL `linux` / `test` (OAI);
 - SMO `.env` passwords (O-RAN SC defaults);
 - the self-signed demo certificates tracked in upstream it/oam;
+- the lab-generated test CA and client keys for the simulated O-DU ↔ SMO TLS link
+  (`smo-oam/solution/o1-ofhmp-interfaces/base/docker/conf/*.key`). They are included on purpose, so
+  the setup runs as it is. Regenerate them with the `openssl` configs in the same folder for anything
+  beyond the lab;
 - the simulated subscribers with PLMN 001/01 and OAI's default keys.
 
 Change them before any deployment outside the lab.
