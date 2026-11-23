@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5G OAI & UERANSIM - Grafana & K8s Monitoring Console</title>
+    <meta name="description" content="Next-Gen 5G Core Network & Kubernetes Real-time Telemetry Dashboard with Grafana & Prometheus Integration">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js for smooth data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-tower-cell"></i>
+                </div>
+                <div class="brand-text">
+                    <h2>AIDY 5G Telemetry</h2>
+                    <span class="sub-text">OAI + Grafana Console</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-item active" data-tab="overview">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>System Overview</span>
+                </button>
+                <button class="nav-item" data-tab="topology">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <span>5G Core Topology</span>
+                </button>
+                <button class="nav-item" data-tab="grafana">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Grafana Control Center</span>
+                </button>
+                <button class="nav-item" data-tab="metrics">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <span>K8s Pod Telemetry</span>
+                </button>
+                <button class="nav-item" data-tab="traffic">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Traffic & iPerf3 Simulator</span>
+                </button>
+                <button class="nav-item" data-tab="promql">
+                    <i class="fa-solid fa-terminal"></i>
+                    <span>PromQL Explorer</span>
+                </button>
+            </nav>
+
+            <div class="cluster-status-card">
+                <div class="status-header">
+                    <span class="status-dot online"></span>
+                    <span class="status-title">Cluster Connected</span>
+                </div>
+                <div class="status-details">
+                    <div class="detail-row">
+                        <span>Cluster:</span>
+                        <strong id="cluster-name">oai-tutorial</strong>
+                    </div>
+                    <div class="detail-row">
+                        <span>Grafana:</span>
+                        <span class="badge badge-success">v13.1.3</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Port:</span>
+                        <code>localhost:3000</code>
+                    </div>
+                </div>
+                <button class="btn btn-outline btn-sm w-100 mt-3" id="quick-refresh-btn">
+                    <i class="fa-solid fa-arrows-rotate"></i> Sync Metrics
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header Bar -->
+            <header class="top-header">
+                <div class="header-left">
+                    <h1 id="page-title">System Overview</h1>
+                    <p class="header-subtitle" id="page-subtitle">Real-time status of 5G Standalone Core & Kubernetes Pods</p>
+                </div>
+                <div class="header-right">
+                    <div class="quick-stats">
+                        <div class="quick-stat">
+                            <span class="qs-label">Pods Active</span>
+                            <span class="qs-val" id="qs-pods-val">15 / 15</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="qs-label">Avg Latency</span>
+                            <span class="qs-val highlight" id="qs-latency-val">4.2 ms</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="qs-label">Throughput</span>
+                            <span class="qs-val highlight-blue" id="qs-tp-val">840 Mbps</span>
+                        </div>
+                    </div>
+                    <a href="http://localhost:3000" target="_blank" class="btn btn-primary">
+                        <i class="fa-solid fa-external-link"></i> Launch Grafana UI
+                    </a>
+                </div>
+            </header>
+
+            <div class="content-body">
+                <!-- TAB 1: SYSTEM OVERVIEW -->
+                <section class="tab-pane active" id="tab-overview">
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <div class="kpi-icon blue"><i class="fa-solid fa-server"></i></div>
+                            <div class="kpi-info">
+                                <h3>5G Core Functions</h3>
+                                <div class="kpi-value" id="kpi-core-count">10 Pods</div>
+                                <span class="kpi-sub green"><i class="fa-solid fa-circle-check"></i> AMF, SMF, UPF, NRF Healthy</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon purple"><i class="fa-solid fa-wifi"></i></div>
+                            <div class="kpi-info">
+                                <h3>UERANSIM RAN</h3>
+                                <div class="kpi-value" id="kpi-ran-count">gNB + UEs</div>
+                                <span class="kpi-sub blue"><i class="fa-solid fa-signal"></i> 3 UEs Connected</span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon green"><i class="fa-solid fa-microchip"></i></div>
+                            <div class="kpi-info">
+                                <h3>Cluster CPU Usage</h3>
+                                <div class="kpi-value" id="kpi-cpu-val">24.5%</div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill green-bg" style="width: 24.5%"></div></div>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon orange"><i class="fa-solid fa-memory"></i></div>
+                            <div class="kpi-info">
+                                <h3>Memory Allocation</h3>
+                                <div class="kpi-value" id="kpi-mem-val">4.8 GB / 16 GB</div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill orange-bg" style="width: 30%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-2col mt-4">
+                        <div class="card glass-card">
+                            <div class="card-header">
+                                <h3><i class="fa-solid fa-chart-area"></i> Real-time Network Throughput & Latency</h3>
+                                <div class="card-actions">
+                                    <span class="badge badge-pulse">Live Stream</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="liveThroughputChart" height="220"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="card glass-card">
+                            <div class="card-header">
+                                <h3><i class="fa-solid fa-cubes"></i> Kubernetes Pod Status (oai-tutorial)</h3>
+                                <span class="badge badge-info">15 Running</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="pod-list-mini" id="pod-list-container">
+                                    <!-- Dynamic pods injected here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 2: 5G CORE TOPOLOGY -->
+                <section class="tab-pane" id="tab-topology">
+                    <div class="card glass-card">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-diagram-project"></i> OpenAirInterface 5G SA Core & UERANSIM Architecture</h3>
+                            <p class="subtitle">Interactive 3GPP Release 16 Control & User Plane Function Map</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="topology-diagram">
+                                <div class="topo-group ue-group">
+                                    <div class="topo-title"><i class="fa-solid fa-mobile-screen"></i> User Equipment</div>
+                                    <div class="topo-node pulse-node" id="node-ue">
+                                        <i class="fa-solid fa-mobile"></i>
+                                        <div class="node-name">UERANSIM UEs</div>
+                                        <div class="node-ip">10.45.0.2 / uesimtun0</div>
+                                        <span class="badge badge-success">Connected</span>
+                                    </div>
+                                </div>
+
+                                <div class="topo-arrow"><i class="fa-solid fa-arrow-right"></i> Radio Interface</div>
+
+                                <div class="topo-group ran-group">
+                                    <div class="topo-title"><i class="fa-solid fa-broadcast-tower"></i> 5G RAN</div>
+                                    <div class="topo-node pulse-node" id="node-gnb">
+                                        <i class="fa-solid fa-tower-cell"></i>
+                                        <div class="node-name">ueransim-gnb</div>
+                                        <div class="node-ip">oai-cu-cp / du</div>
+                                        <span class="badge badge-success">gNB Active</span>
+                                    </div>
+                                </div>
+
+                                <div class="topo-arrow"><i class="fa-solid fa-arrow-right"></i> N2 / N3</div>
+
+                                <div class="topo-group core-group">
+                                    <div class="topo-title"><i class="fa-solid fa-network-wired"></i> OAI 5G Core Network (K8s Namespace: oai-tutorial)</div>
+                                    <div class="core-grid">
+                                        <div class="topo-node core-node" id="node-amf">
+                                            <i class="fa-solid fa-shield-halved"></i>
+                                            <div class="node-name">AMF</div>
+                                            <div class="node-sub">Access & Mobility</div>
+                                        </div>
+                                        <div class="topo-node core-node" id="node-smf">
+                                            <i class="fa-solid fa-route"></i>
+                                            <div class="node-name">SMF</div>
+                                            <div class="node-sub">Session Mgmt</div>
+                                        </div>
+                                        <div class="topo-node core-node highlight-upf" id="node-upf">
+                                            <i class="fa-solid fa-bolt-lightning"></i>
+                                            <div class="node-name">UPF</div>
+                                            <div class="node-sub">User Plane Data</div>
+                                        </div>
+                                        <div class="topo-node core-node" id="node-nrf">
+                                            <i class="fa-solid fa-folder-tree"></i>
+                                            <div class="node-name">NRF</div>
+                                            <div class="node-sub">Repo Function</div>
+                                        </div>
+                                        <div class="topo-node core-node" id="node-udm">
+                                            <i class="fa-solid fa-user-gear"></i>
+                                            <div class="node-name">UDM</div>
+                                            <div class="node-sub">User Data Mgmt</div>
+                                        </div>
+                                        <div class="topo-node core-node" id="node-udr">
+                                            <i class="fa-solid fa-database"></i>
+                                            <div class="node-name">UDR</div>
+                                            <div class="node-sub">User Data Repo</div>
+                                        </div>
+                                        <div class="topo-node core-node" id="node-ausf">
+                                            <i class="fa-solid fa-key"></i>
+                                            <div class="node-name">AUSF</div>
+                                            <div class="node-sub">Authentication</div>
+                                        </div>
+                                        <div class="topo-node core-node" id="node-mysql">
+                                            <i class="fa-solid fa-hard-drive"></i>
+                                            <div class="node-name">MySQL</div>
+                                            <div class="node-sub">Subscriber DB</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="topo-arrow"><i class="fa-solid fa-arrow-right"></i> N6</div>
+
+                                <div class="topo-group dn-group">
+                                    <div class="topo-title"><i class="fa-solid fa-globe"></i> Data Network</div>
+                                    <div class="topo-node pulse-node" id="node-dn">
+                                        <i class="fa-solid fa-cloud"></i>
+                                        <div class="node-name">Ext Traffic / iPerf3</div>
+                                        <div class="node-ip">oai-traffic-server</div>
+                                        <span class="badge badge-primary">Data Sinks</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 3: GRAFANA CONTROL CENTER -->
+                <section class="tab-pane" id="tab-grafana">
+                    <div class="grafana-header-bar mb-3">
+                        <div class="gh-info">
+                            <h2><i class="fa-solid fa-chart-line color-orange"></i> Grafana Dashboard Integration</h2>
+                            <p>Select Folder: <strong>5G Network</strong></p>
+                        </div>
+                        <div class="gh-actions">
+                            <select class="form-control me-2" id="grafana-dashboard-select" style="width: auto; display: inline-block;">
+                                <option value="http://localhost:3000/d/monolithic-5g-gnb?kiosk=tv">Case 1: Monolithic 5G gNB & Core</option>
+                                <option value="http://localhost:3000/d/case2-cu-du-split?kiosk=tv">Case 2: CU-DU F1 Split 5G</option>
+                                <option value="http://localhost:3000/d/case3-e1-f1-split?kiosk=tv">Case 3: CU-CP / CU-UP / DU E1-F1 Split 5G</option>
+                                <option value="http://localhost:3000/d/5g-k8s-pod-monitoring?kiosk=tv">Kubernetes Pods Monitoring (All)</option>
+                            </select>
+                            <div class="btn-group">
+                                <button class="btn btn-outline" id="grafana-frame-reload"><i class="fa-solid fa-rotate-right"></i> Reload Frame</button>
+                                <a href="http://localhost:3000/d/monolithic-5g-gnb" target="_blank" class="btn btn-primary" id="grafana-external-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Fullscreen</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grafana-container">
+                        <div class="grafana-notice" id="grafana-notice">
+                            <div class="notice-box">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <div>
+                                    <h4>Grafana Web Console Direct Access</h4>
+                                    <p>Grafana is running on <strong>http://localhost:3000</strong> with pre-configured Prometheus datasource and provisioned 5G K8s Pod Monitoring Dashboards.</p>
+                                    <p class="mt-1">Default credentials: <code>admin</code> / <code>admin</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <iframe id="grafana-iframe" src="http://localhost:3000/d/5g-k8s-pod-monitoring?kiosk=tv" frameborder="0"></iframe>
+                    </div>
+                </section>
+
+                <!-- TAB 4: K8S POD TELEMETRY -->
+                <section class="tab-pane" id="tab-metrics">
+                    <div class="metrics-header mb-3">
+                        <h2><i class="fa-solid fa-gauge"></i> Real-time Pod Performance Gauges</h2>
+                    </div>
+                    <div class="grid-3col">
+                        <div class="card glass-card">
+                            <div class="card-header">
+                                <h3><i class="fa-solid fa-microchip"></i> CPU Allocation & Usage</h3>
+                            </div>
+                            <div class="card-body text-center">
+                                <canvas id="cpuGaugeChart" height="200"></canvas>
+                                <div class="gauge-value mt-2" id="gauge-cpu-text">0.42 Cores / 4.0 Cores</div>
+                            </div>
+                        </div>
+                        <div class="card glass-card">
+                            <div class="card-header">
+                                <h3><i class="fa-solid fa-memory"></i> Memory Allocation & Usage</h3>
+                            </div>
+                            <div class="card-body text-center">
+                                <canvas id="memGaugeChart" height="200"></canvas>
+                                <div class="gauge-value mt-2" id="gauge-mem-text">4.82 GB / 16.0 GB</div>
+                            </div>
+                        </div>
+                        <div class="card glass-card">
+                            <div class="card-header">
+                                <h3><i class="fa-solid fa-network-wired"></i> Pod Network RX / TX Rate</h3>
+                            </div>
+                            <div class="card-body text-center">
+                                <canvas id="netRateChart" height="200"></canvas>
+                                <div class="gauge-value mt-2" id="gauge-net-text">RX: 142 MB/s | TX: 98 MB/s</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card glass-card mt-4">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-list-check"></i> 5G Core & Monitoring Pod Resources Table</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table" id="pod-metrics-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Pod Name</th>
+                                            <th>Namespace</th>
+                                            <th>Status</th>
+                                            <th>Restarts</th>
+                                            <th>CPU Usage</th>
+                                            <th>Memory Usage</th>
+                                            <th>Role</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="pod-table-body">
+                                        <!-- Injected via JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 5: TRAFFIC & IPERF3 SIMULATOR -->
+                <section class="tab-pane" id="tab-traffic">
+                    <div class="grid-2col">
+                        <div class="card glass-card">
+                            <div class="card-header">
+                                <h3><i class="fa-solid fa-sliders"></i> Traffic Generator Controls</h3>
+                                <span class="badge badge-primary">iPerf3 + UERANSIM</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group mb-3">
+                                    <label>Simulated Connected UEs</label>
+                                    <input type="range" class="form-range" id="ue-range-slider" min="1" max="50" value="5">
+                                    <div class="range-val-disp"><span id="ue-count-disp">5</span> UEs Active</div>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label>Traffic Mode</label>
+                                    <select class="form-control" id="traffic-mode">
+                                        <option value="tcp">TCP High Throughput (DL/UL)</option>
+                                        <option value="udp">UDP Low Latency Stream (5G Slice)</option>
+                                        <option value="ping">ICMP Ping RTT Test</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label>Duration (Seconds)</label>
+                                    <input type="number" class="form-control" id="traffic-duration" value="60">
+                                </div>
+
+                                <div class="btn-flex mt-4">
+                                    <button class="btn btn-success" id="start-traffic-btn"><i class="fa-solid fa-play"></i> Start Load Test</button>
+                                    <button class="btn btn-danger" id="stop-traffic-btn" disabled><i class="fa-solid fa-stop"></i> Stop Load Test</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card glass-card">
+                            <div class="card-header">
+                                <h3><i class="fa-solid fa-wave-square"></i> Real-time iPerf3 Performance</h3>
+                                <span class="badge badge-pulse" id="test-status-badge">Idle</span>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="trafficSimChart" height="220"></canvas>
+                                <div class="traffic-metrics-summary mt-3">
+                                    <div class="t-stat">
+                                        <span>Current Rate</span>
+                                        <strong id="t-rate-val">0 Mbps</strong>
+                                    </div>
+                                    <div class="t-stat">
+                                        <span>Packets Lost</span>
+                                        <strong id="t-loss-val">0.00%</strong>
+                                    </div>
+                                    <div class="t-stat">
+                                        <span>Jitter</span>
+                                        <strong id="t-jitter-val">0.12 ms</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 6: PROMQL EXPLORER -->
+                <section class="tab-pane" id="tab-promql">
+                    <div class="card glass-card">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-terminal"></i> Prometheus PromQL Query Studio</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="promql-input-group">
+                                <input type="text" class="form-control code-font" id="promql-input" value="sum(container_memory_working_set_bytes{namespace='oai-tutorial'}) by (pod)">
+                                <button class="btn btn-primary" id="run-promql-btn"><i class="fa-solid fa-magnifying-glass"></i> Execute Query</button>
+                            </div>
+
+                            <div class="preset-queries mt-3">
+                                <span>Quick Presets:</span>
+                                <button class="btn btn-xs btn-outline preset-btn" data-query="sum(rate(container_cpu_usage_seconds_total{namespace='oai-tutorial'}[2m])) by (pod)">OAI Pod CPU Usage</button>
+                                <button class="btn btn-xs btn-outline preset-btn" data-query="sum(container_memory_working_set_bytes{namespace='oai-tutorial'}) by (pod)">OAI Pod Memory</button>
+                                <button class="btn btn-xs btn-outline preset-btn" data-query="kube_pod_container_status_running{namespace='oai-tutorial'}">Running Pods Count</button>
+                            </div>
+
+                            <div class="promql-results mt-4">
+                                <h4>Query Results</h4>
+                                <pre class="code-block" id="promql-output">Executing Prometheus query...</pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

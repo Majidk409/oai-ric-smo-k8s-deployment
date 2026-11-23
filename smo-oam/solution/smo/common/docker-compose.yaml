@@ -1,0 +1,353 @@
+################################################################################
+# Copyright 2024 highstreet technologies
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+services:
+  gateway:
+    image: ${TRAEFIK_IMAGE}
+    container_name: gateway
+    hostname: gateway
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "traefik",
+          "healthcheck",
+          "--ping"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+      - "4334:4334"
+      - "4335:4335"
+    command:
+      - --serverstransport.insecureskipverify=true
+      - --log.level=${TRAEFIK_LOG_LEVEL}
+      - --global.sendanonymoususage=false
+      - --global.checkNewVersion=false
+      - --api.insecure=true
+      - --api.dashboard=true
+      - --api.debug=true
+      - --ping
+      - --accesslog=false
+      - --entrypoints.web.address=:80
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --entrypoints.web.http.redirections.entrypoint.scheme=https
+      - --entrypoints.websecure.address=:443
+      # OAM-471: This command is necessary to ensure that traefik does not replace the semicolon in the RFC8040 filter query with a '&'.
+      - --entrypoints.websecure.http.encodequerysemicolons=true
+      - --entrypoints.websecure.http.tls.domains[0].main=gateway.${HTTP_DOMAIN}
+      - --entrypoints.websecure.http.tls.domains[0].sans=*.${HTTP_DOMAIN}
+      - --entrypoints.ssh-netconf-callhome.address=:4334
+      - --entrypoints.tls-netconf-callhome.address=:4335
+      - --providers.docker.endpoint=unix:///var/run/docker.sock
+      - --providers.docker.network=${TRAEFIK_NETWORK_NAME}
+      - --providers.docker.exposedByDefault=false
+      - --providers.docker.watch=true
+      - --providers.file.filename=/etc/traefik/middleware.yaml
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./gateway/conf/middleware.yaml:/etc/traefik/middleware.yaml:ro
+      - ./gateway/conf/.htpasswd:/.htpasswd:ro
+      - ./certs-selfsigned/smo.o-ran-sc.org.crt:/certs/dev.crt
+      - ./certs-selfsigned/smo.o-ran-sc.org.key:/certs/dev.key
+      - ./letsencrypt:/letsencrypt  # ACME storage
+    labels:
+      traefik.enable: true
+      traefik.http.middlewares.traefik-auth.basicauth.usersfile: .htpasswd
+      traefik.http.routers.gateway.rule: Host(`gateway.${HTTP_DOMAIN}`)
+      traefik.http.routers.gateway.entrypoints: websecure
+      traefik.http.routers.gateway.service: api@internal
+      traefik.http.routers.gateway.middlewares: strip
+      traefik.http.middlewares.strip.stripprefix.prefixes: /traefik
+      traefik.http.routers.gateway.tls: true
+      traefik.http.services.gateway.loadbalancer.server.port: 8080
+      app: "gateway"
+      deploy: "o-ran-sc-smo-common"
+      solution: "o-ran-sc-smo"
+    networks:
+      dmz:
+      dcn:
+
+  identitydb:
+    image: ${IDENTITYDB_IMAGE}
+    container_name: identitydb
+    hostname: identitydb
+    environment:
+      ALLOW_EMPTY_PASSWORD: no
+      POSTGRESQL_USERNAME: keycloak
+      POSTGRESQL_DATABASE: keycloak
+      POSTGRESQL_PASSWORD: keycloak
+    labels:
+      app: "identitydb"
+      deploy: "o-ran-sc-smo-common"
+      solution: "o-ran-sc-smo"
+
+  identity:
+    image: ${IDENTITY_IMAGE}
+    container_name: identity
+    hostname: identity
+    healthcheck:
+      test: curl "http://localhost:9000/health/ready" || exit 1
+      interval: 5s
+      timeout: 10s
+      retries: 45
+    environment:
+      KEYCLOAK_CREATE_ADMIN_USER: true
+      KC_BOOTSTRAP_ADMIN_USERNAME: ${ADMIN_USERNAME}
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      KEYCLOAK_MANAGEMENT_USER: ${IDENTITY_MGMT_USERNAME}
+      KEYCLOAK_MANAGEMENT_PASSWORD: ${IDENTITY_MGMT_PASSWORD}
+      KEYCLOAK_DATABASE_HOST: identitydb
+      KEYCLOAK_DATABASE_NAME: keycloak
+      KEYCLOAK_DATABASE_USER: keycloak
+      KEYCLOAK_DATABASE_PASSWORD: keycloak
+      KEYCLOAK_JDBC_PARAMS=sslmode: disable&connectTimeout=30000
+      KEYCLOAK_PRODUCTION: false
+      KEYCLOAK_ENABLE_TLS: true
+      KEYCLOAK_TLS_KEYSTORE_FILE: /opt/bitnami/keycloak/certs/keystore.jks
+      KEYCLOAK_TLS_TRUSTSTORE_FILE: /opt/bitnami/keycloak/certs/truststore.jks
+      KEYCLOAK_TLS_KEYSTORE_PASSWORD: password
+      KEYCLOAK_TLS_TRUSTSTORE_PASSWORD: changeit
+      KC_HOSTNAME: "https://identity.${HTTP_DOMAIN}"
+      KC_HOSTNAME_ADMIN: "https://identity.${HTTP_DOMAIN}"
+      KC_HEALTH_ENABLED: true
+      KEYCLOAK_EXTRA_ARGS: "--spi-theme-default=oam --import-realm"
+    restart: unless-stopped
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./identity/o-ran-sc-realm.json:/opt/bitnami/keycloak/data/import/o-ran-sc-realm.json
+      - ./identity/standalone.xml:/opt/jboss/keycloak/standalone/configuration/standalone.xml
+      - ./identity/keystore.jks:/opt/bitnami/keycloak/certs/keystore.jks
+      - ./identity/truststoreONAPall.jks:/opt/bitnami/keycloak/certs/truststore.jks
+      - ./identity/themes/oam:/opt/bitnami/keycloak/themes/oam
+    labels:
+      traefik.enable: true
+      traefik.http.routers.identity.entrypoints: websecure
+      traefik.http.routers.identity.rule: Host(`identity.${HTTP_DOMAIN}`)
+      traefik.http.routers.identity.tls: true
+      traefik.http.services.identity.loadbalancer.server.port: 8080
+      app: "identity"
+      deploy: "o-ran-sc-smo-common"
+      solution: "o-ran-sc-smo"
+    depends_on:
+      identitydb:
+        condition: service_started
+      gateway:
+        condition: service_healthy
+    networks:
+      dmz:
+      default:
+
+  persistence:
+    image: ${PERSISTENCE_IMAGE}
+    container_name: persistence
+    environment:
+      MARIADB_ROOT_PASSWORD: admin
+      MARIADB_DATABASE: sdnrdb
+      MARIADB_USER: sdnrdb
+      MARIADB_PASSWORD: sdnrdb
+      MARIADB_EXTRA_FLAGS: --bind-address=* --max_connections=400
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: sdnrdb
+      MYSQL_USER: sdnrdb
+      MYSQL_PASSWORD: sdnrdb
+    labels:
+      app: "persistence"
+      deploy: "o-ran-sc-smo-common"
+      solution: "o-ran-sc-smo"
+    healthcheck:
+      interval: 30s
+      retries: 3
+      test:
+        [
+          "CMD",
+          "healthcheck.sh",
+          "--su-mysql",
+          "--connect",
+          "--innodb_initialized"
+        ]
+      timeout: 30s
+
+  zookeeper:
+    image: ${ZOOKEEPER_IMAGE}
+    container_name: zookeeper
+    command: [
+       "sh", "-c",
+       "bin/zookeeper-server-start.sh config/zookeeper.properties"
+    ]
+    environment:
+      ZOOKEEPER_REPLICAS: 1
+      ZOOKEEPER_TICK_TIME: 2000
+      ZOOKEEPER_SYNC_LIMIT: 5
+      ZOOKEEPER_INIT_LIMIT: 10
+      ZOOKEEPER_MAX_CLIENT_CNXNS: 200
+      ZOOKEEPER_AUTOPURGE_SNAP_RETAIN_COUNT: 3
+      ZOOKEEPER_AUTOPURGE_PURGE_INTERVAL: 24
+      ZOOKEEPER_CLIENT_PORT: 2181
+      KAFKA_OPTS: -Djava.security.auth.login.config=/etc/zookeeper/secrets/jaas/zk_server_jaas.conf -Dzookeeper.kerberos.removeHostFromPrincipal=true -Dzookeeper.kerberos.removeRealmFromPrincipal=true -Dzookeeper.authProvider.1=org.apache.zookeeper.server.auth.SASLAuthenticationProvider -Dzookeeper.requireClientAuthScheme=sasl
+      ZOOKEEPER_SERVER_ID:
+      LOG_DIR: /tmp/logs
+    volumes:
+      - ./zookeeper/zk_server_jaas.conf:/etc/zookeeper/secrets/jaas/zk_server_jaas.conf
+    labels:
+      app: "zookeeper"
+      deploy: "o-ran-sc-smo-common"
+      solution: "o-ran-sc-smo"
+
+  kafka:
+    image: ${KAFKA_IMAGE}
+    container_name: kafka
+    command: [
+        "sh", "-c",
+        "bin/kafka-server-start.sh config/server.properties --override listeners=$${KAFKA_LISTENERS} \
+                     --override advertised.listeners=$${KAFKA_ADVERTISED_LISTENERS} \
+                     --override zookeeper.connect=$${KAFKA_ZOOKEEPER_CONNECT}"
+    ]
+    environment:
+      LOG_DIR: /tmp/logs
+      enableCadi: 'false'
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ZOOKEEPER_CONNECTION_TIMEOUT_MS: 40000
+      KAFKA_ZOOKEEPER_SESSION_TIMEOUT_MS: 40000
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:SASL_PLAINTEXT,PLAIN:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_CONFLUENT_SUPPORT_METRICS_ENABLE: 'false'
+      KAFKA_OPTS: -Djava.security.auth.login.config=/etc/kafka/secrets/jaas/zk_client_jaas.conf
+      KAFKA_ZOOKEEPER_SET_ACL: 'true'
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      # Reduced the number of partitions only to avoid the timeout error for the first subscribe call in slow environment
+      KAFKA_OFFSETS_TOPIC_NUM_PARTITIONS: 1
+      KAFKA_OPA_AUTHORIZER_CACHE_EXPIRE_AFTER_SECONDS: 10
+      KAFKA_OPA_AUTHORIZER_URL: http://opa-kafka:8181/v1/data/kafka/authz/allow
+      KAFKA_AUTHORIZER_CLASS_NAME: org.openpolicyagent.kafka.OpaAuthorizer
+    labels:
+      app: "kafka"
+      deploy: "o-ran-sc-smo-common"
+      solution: "o-ran-sc-smo"
+    volumes:
+      - ./kafka/zk_client_jaas.conf:/etc/kafka/secrets/jaas/zk_client_jaas.conf
+    depends_on:
+      zookeeper:
+        condition: service_started
+
+  kafka-bridge:
+    image: ${KAFKA_BRIDGE_IMAGE}
+    container_name: kafka-bridge
+    hostname: kafka-bridge
+    entrypoint: /opt/strimzi/bin/kafka_bridge_run.sh
+    command: --config-file=config/application.properties
+    healthcheck:
+      test: curl http://localhost:8080/healthy || exit 1
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    labels:
+      traefik.enable: true
+      traefik.http.routers.kafka-bridge.entrypoints: websecure
+      traefik.http.routers.kafka-bridge.rule: Host(`kafka-bridge.${HTTP_DOMAIN}`)
+      traefik.http.routers.kafka-bridge.tls: true
+      traefik.http.services.kafka-bridge.loadbalancer.server.port: 8080
+      app: "kafka-bridge"
+      deploy: "o-ran-sc-smo-common"
+      solution: "o-ran-sc-smo"
+    volumes:
+      - ./kafka-bridge:/opt/strimzi/config
+    depends_on:
+      kafka:
+        condition: service_started
+      gateway:
+        condition: service_healthy
+    networks:
+      dmz:
+      default:
+
+  kafka-ui:
+    container_name: kafka-ui
+    image: ${KAFKA_UI_IMAGE}
+    environment:
+      KAFKA_CLUSTERS_0_NAME: kafka
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+      DYNAMIC_CONFIG_ENABLED: 'true'
+      SPRING_CONFIG_ADDITIONAL-LOCATION: /config.yaml
+      JAVA_OPTS: "-Djavax.net.ssl.trustStore=/etc/certs/truststore.jks -Djavax.net.ssl.trustStorePassword=changeit -Djdk.internal.httpclient.disableHostnameVerification=true"
+    volumes:
+      - ./kafka-ui/config.yaml:/config.yaml
+      - ./certs-selfsigned/smo.o-ran-sc.org.jks:/etc/certs/truststore.jks
+    labels:
+      traefik.enable: true
+      traefik.http.routers.kafka-ui.entrypoints: websecure
+      traefik.http.routers.kafka-ui.rule: Host(`kafka-ui.${HTTP_DOMAIN}`)
+      traefik.http.routers.kafka-ui.tls: true
+      traefik.http.services.kafka-ui.loadbalancer.server.port: 8080
+      app: "kafka-ui"
+      deploy: "o-ran-sc-smo-common"
+      solution: "o-ran-sc-smo"
+    depends_on:
+      identity:
+         condition: service_healthy
+    networks:
+      dmz:
+      default:
+      
+  topology:
+    image: "${O_RAN_SC_TOPOLOGY_IMAGE}"
+    container_name: topology
+    hostname: topology
+    healthcheck:
+      test: curl -u ${ADMIN_USERNAME}:${ADMIN_USERNAME} http://localhost:8181 || exit 1
+      start_period: 30s
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+        - ./topology/tapi-common-operational.json:/opt/dev/deploy/data/tapi-common-operational.json
+        - ./topology/tapi-common-running.json:/opt/dev/deploy/data/tapi-common-running.json
+    labels:
+      traefik.enable: true
+      traefik.http.routers.topology.entrypoints: websecure
+      traefik.http.routers.topology.rule: Host(`topology.${HTTP_DOMAIN}`)
+      traefik.http.routers.topology.tls: true
+      traefik.http.services.topology.loadbalancer.server.port: 8181
+      app: "topology"
+      deploy: "o-ran-sc-smo-common"
+      solution: "o-ran-sc-smo"
+    networks:
+      dmz:
+      default:
+
+networks:
+  dmz:
+    name: dmz
+    driver: bridge
+    enable_ipv6: false
+  default:
+    name: smo
+    driver: bridge
+    enable_ipv6: false
+  dcn:
+    driver: bridge
+    name: dcn
+    enable_ipv6: true
+    ipam:
+      driver: default
+      config:
+      - subnet:  ${NETWORK_SUBNET_DCN_IPv6}

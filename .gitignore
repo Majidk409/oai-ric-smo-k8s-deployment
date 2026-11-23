@@ -1,0 +1,6 @@
+# never commit private keys generated on the machine
+smo-oam/solution/o1-ofhmp-interfaces/**/*.key
+*.kubeconfig
+kubeconfig*
+.kube/
+__pycache__/

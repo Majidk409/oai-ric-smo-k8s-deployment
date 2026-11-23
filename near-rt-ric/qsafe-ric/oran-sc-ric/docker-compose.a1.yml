@@ -1,0 +1,35 @@
+# qsafe-testbed: A1 mediator (O-RAN SC i-release) so the Non-RT RIC can send A1 policies.
+services:
+  a1mediator:
+    container_name: ric_a1mediator
+    hostname: a1mediator
+    image: nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-a1:3.2.2
+    environment:
+      - PYTHONUNBUFFERED=1
+      - RMR_SEED_RT=/opt/route/local.rt
+      - DBAAS_SERVICE_HOST=10.0.3.12
+      - DBAAS_SERVICE_PORT=6379
+      - A1_RMR_RETRY_TIMES=20
+      - INSTANCE_DELETE_NO_RESP_TTL=5
+      - INSTANCE_DELETE_RESP_TTL=10
+    volumes:
+      - type: bind
+        source: ./ric/configs/routes.rtg
+        target: /opt/route/local.rt
+    ports:
+      - "10000:10000"
+    networks:
+      ric_network:
+        ipv4_address: 10.0.3.16
+  a1proxy:
+    container_name: ric_a1proxy
+    image: nginx:alpine
+    volumes:
+      - type: bind
+        source: ./ric/configs/a1proxy/default.conf
+        target: /etc/nginx/conf.d/default.conf
+    ports:
+      - "10001:10001"
+    networks:
+      ric_network:
+        ipv4_address: 10.0.3.17

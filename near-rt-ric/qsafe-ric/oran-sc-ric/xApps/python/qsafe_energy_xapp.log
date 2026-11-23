@@ -1,0 +1,796 @@
+1790689546725 13/RMR [INFO] ric message routing library on SI95 p=4560 mv=3 flg=00 id=a (f447e29 4.9.4 built: Dec 13 2023)
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+Successfully subscribed with Subscription ID:  3K0LTcBrGNXqpllsqkEEVGog3m8
+Received Subscription ID to E2EventInstanceId mapping: 3K0LTcBrGNXqpllsqkEEVGog3m8 -> 8
+{'response': 'OK', 'status': 200, 'payload': '{}', 'ctype': 'application/json', 'attachment': None, 'mode': 'plain'}
+10.0.3.13 - - [29/Sep/2026 13:45:47] "POST /ric/v1/subscriptions/response HTTP/1.1" 200 -
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 25} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 30} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 35} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 40} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 45} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 50} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 55} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 60} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 65} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 70} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 75} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 80} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 85} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 90} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 95} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 25} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 30} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 35} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 40} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 45} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 50} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 55} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 60} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 65} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 70} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 75} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 80} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 85} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 90} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 95} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 25} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 30} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 35} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 25%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 25} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 25%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 25} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 30} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 35} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 40} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 45} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 50} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 55} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 60} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 65} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 70} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 75} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 80} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 85} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 90} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 95} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 25} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 25} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 30} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 35} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 40} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 45} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 50} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 55} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 60} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 65} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 70} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 75} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 80} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 85} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 90} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 95} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 25} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 30} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 35} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 40} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 45} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 50} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 55} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 60} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 65} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 70} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 75} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 80} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 85} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 90} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 95} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 25} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 30} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 35} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 40} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 45} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 50} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 55} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 60} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 65} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 70} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 75} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 80} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 85} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 90} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 95} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 25} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 UPDATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 30} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 15} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 15%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 100} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 UPDATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 DELETE es-cell1-b {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1-a {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1 {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 100%
+[energy-xapp] A1 DELETE es-cell1 {} -> DELETED
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 20%
+[energy-xapp] A1 CREATE es-cell1-a {'cell_id': '12345678', 'max_prb_ratio': 20} -> OK
+[energy-xapp] E2 RC control -> gnbd_208_095_00000e00_e00: DL max PRB ratio 10%
+[energy-xapp] A1 CREATE es-cell1-b {'cell_id': '12345678', 'max_prb_ratio': 10} -> OK

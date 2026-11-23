@@ -1,0 +1,26 @@
+1790545797229 13/RMR [INFO] ric message routing library on SI95 p=4562 mv=3 flg=00 id=a (f447e29 4.9.4 built: Dec 13 2023)
+Subscribe to E2 node ID: gnbd_208_095_00000e00_e00, RAN func: e2sm_kpm, Report Style: 4, metrics: ['DRB.UEThpDl', 'DRB.UEThpUl', 'RRU.PrbTotDl']
+Exception in thread Thread-2:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "./kpm_mon_xapp.py", line 82, in start
+    self.e2sm_kpm.subscribe_report_service_style_4(e2_node_id, report_period, matchingUeConds, metric_names, granul_period, subscription_callback)
+  File "/opt/xApps/lib/e2sm_kpm_module.py", line 48, in subscribe_report_service_style_4
+    self.parent.subscribe(e2_node_id, self.ran_func_id, event_trigger_def, action_def, indication_callback, e2sm_types.E2SM_KPM)
+  File "/opt/xApps/lib/xAppBase.py", line 111, in subscribe
+    data, reason, status  = self.subscriber.Subscribe(subReq)
+  File "/opt/ric-plt-xapp-frame-py/ricxappframe/xapp_subscribe.py", line 101, in Subscribe
+    response = self.api.request(method="POST", url=self.uri + "/subscriptions", headers=None, body=subs_params.to_dict())
+  File "/opt/ric-plt-xapp-frame-py/ricxappframe/subsclient/api_client.py", line 368, in request
+    return self.rest_client.POST(url,
+  File "/opt/ric-plt-xapp-frame-py/ricxappframe/subsclient/rest.py", line 269, in POST
+    return self.request("POST", url,
+  File "/opt/ric-plt-xapp-frame-py/ricxappframe/subsclient/rest.py", line 228, in request
+    raise ApiException(http_resp=r)
+ricxappframe.subsclient.rest.ApiException: (503)
+Reason: Service Unavailable
+HTTP response headers: HTTPHeaderDict({'Date': 'Sun, 27 Sep 2026 21:49:58 GMT', 'Content-Length': '0', 'Connection': 'close'})
+

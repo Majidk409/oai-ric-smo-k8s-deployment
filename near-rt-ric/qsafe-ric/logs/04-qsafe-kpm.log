@@ -1,0 +1,305 @@
+1790546374843 13/RMR [INFO] ric message routing library on SI95 p=4562 mv=3 flg=00 id=a (f447e29 4.9.4 built: Dec 13 2023)
+Subscribe to E2 node ID: gnbd_208_095_00000e00_e00, RAN func: e2sm_kpm, Report Style: 4, metrics: ['DRB.UEThpDl', 'DRB.UEThpUl', 'RRU.PrbTotDl']
+Successfully subscribed with Subscription ID:  3JvfHfSCQ5s7VkaSipAbfDBxsiR
+Received Subscription ID to E2EventInstanceId mapping: 3JvfHfSCQ5s7VkaSipAbfDBxsiR -> 3
+{'response': 'OK', 'status': 200, 'payload': '{}', 'ctype': 'application/json', 'attachment': None, 'mode': 'plain'}
+10.0.3.13 - - [27/Sep/2026 21:59:35] "POST /ric/v1/subscriptions/response HTTP/1.1" 200 -
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1908-11-22 15:17:45
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [2760849.528]
+---Metric: DRB.UEThpUl, Value: [25847.016]
+---Metric: RRU.PrbTotDl, Value: [4021768]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1908-12-04 05:04:24
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1908-12-15 18:51:10
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.024]
+---Metric: DRB.UEThpUl, Value: [0.512]
+---Metric: RRU.PrbTotDl, Value: [25]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1908-12-27 08:37:43
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-01-07 22:24:24
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-01-19 12:11:04
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-01-31 01:57:43
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-02-11 15:44:24
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [15]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-02-23 05:31:06
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-03-06 19:17:48
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-03-18 09:04:27
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-03-29 22:51:10
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-04-10 12:37:49
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-04-22 02:24:28
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [15]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-05-03 16:11:14
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-05-15 05:57:53
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-05-26 19:44:32
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-06-07 09:31:08
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-06-18 23:17:52
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-06-30 13:04:29
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [15]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-07-12 02:51:18
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-07-23 16:37:51
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-08-04 06:25:05
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [15]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-08-15 20:11:09
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-08-27 09:57:46
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-09-07 23:44:29
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [15]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-09-19 13:31:05
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-10-01 03:17:49
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [15]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-10-12 17:04:26
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-10-24 06:51:08
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [15]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-11-04 20:37:52
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-11-16 10:24:28
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [10]
+
+RIC Indication Received from gnbd_208_095_00000e00_e00 for Subscription ID: 3, KPM Report Style: 4
+E2SM_KPM RIC Indication Content:
+-ColletStartTime:  1909-11-28 00:11:06
+-Measurements Data:
+--UE_id: 1
+---Metric: DRB.UEThpDl, Value: [0.0]
+---Metric: DRB.UEThpUl, Value: [0.0]
+---Metric: RRU.PrbTotDl, Value: [20]
+Unsubscribe Subscription ID:  3JvfHfSCQ5s7VkaSipAbfDBxsiR
+Successfully unsubscribed from Subscription ID:  3JvfHfSCQ5s7VkaSipAbfDBxsiR

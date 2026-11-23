@@ -1,0 +1,13 @@
+
+# SMO OAM development system
+10.230.4.42                   smo.o-ran-sc.org
+10.230.4.42           gateway.smo.o-ran-sc.org
+10.230.4.42          identity.smo.o-ran-sc.org
+10.230.4.42          messages.smo.o-ran-sc.org
+10.230.4.42      kafka-bridge.smo.o-ran-sc.org
+10.230.4.42          kafka-ui.smo.o-ran-sc.org
+10.230.4.42         odlux.oam.smo.o-ran-sc.org
+10.230.4.42         flows.oam.smo.o-ran-sc.org
+10.230.4.42         tests.oam.smo.o-ran-sc.org
+10.230.4.42    controller.dcn.smo.o-ran-sc.org
+10.230.4.42 ves-collector.dcn.smo.o-ran-sc.org

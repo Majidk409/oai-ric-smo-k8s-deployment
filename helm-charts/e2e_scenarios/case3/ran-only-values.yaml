@@ -1,0 +1,20 @@
+mysql:
+  enabled: false
+oai-amf:
+  enabled: false
+oai-ausf:
+  enabled: false
+oai-nrf:
+  enabled: false
+oai-smf:
+  enabled: false
+oai-udm:
+  enabled: false
+oai-udr:
+  enabled: false
+oai-upf:
+  enabled: false
+oai-traffic-server:
+  enabled: false
+oai-nr-ue:
+  enabled: false

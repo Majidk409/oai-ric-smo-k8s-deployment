@@ -1,0 +1,93 @@
+time="2026-09-28T03:36:36+05:30" level=warning msg="/home/snsrl/qsafe-ric/oran-sc-ric/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ a1proxy Pulling 
+ e2de96513ba9 Pulling fs layer 
+ d9aae54b5831 Pulling fs layer 
+ 6c53d0b2a666 Pulling fs layer 
+ 745dfb2690dd Pulling fs layer 
+ 9a9a644fdd6a Pulling fs layer 
+ 64c8194480fe Pulling fs layer 
+ e76228b47809 Pulling fs layer 
+ e72112c14215 Pulling fs layer 
+ 745dfb2690dd Waiting 
+ 64c8194480fe Waiting 
+ 9a9a644fdd6a Waiting 
+ e72112c14215 Waiting 
+ e76228b47809 Waiting 
+ 6c53d0b2a666 Downloading [==================================================>]     629B/629B
+ 6c53d0b2a666 Verifying Checksum 
+ 6c53d0b2a666 Download complete 
+ d9aae54b5831 Downloading [>                                                  ]  32.17kB/1.931MB
+ d9aae54b5831 Downloading [=>                                                 ]  64.94kB/1.931MB
+ e2de96513ba9 Downloading [>                                                  ]  48.55kB/3.85MB
+ d9aae54b5831 Downloading [==>                                                ]  97.71kB/1.931MB
+ e2de96513ba9 Downloading [=>                                                 ]  146.9kB/3.85MB
+ d9aae54b5831 Downloading [=====>                                             ]  228.8kB/1.931MB
+ e2de96513ba9 Downloading [===>                                               ]  245.2kB/3.85MB
+ d9aae54b5831 Downloading [==========>                                        ]  392.6kB/1.931MB
+ e2de96513ba9 Downloading [=====>                                             ]  392.6kB/3.85MB
+ d9aae54b5831 Downloading [=================>                                 ]  687.5kB/1.931MB
+ e2de96513ba9 Downloading [========>                                          ]  638.4kB/3.85MB
+ d9aae54b5831 Downloading [=============================>                     ]  1.146MB/1.931MB
+ e2de96513ba9 Downloading [=============>                                     ]  1.032MB/3.85MB
+ d9aae54b5831 Download complete 
+ e2de96513ba9 Downloading [=====================>                             ]  1.671MB/3.85MB
+ e2de96513ba9 Downloading [===================================>               ]  2.703MB/3.85MB
+ e2de96513ba9 Download complete 
+ e2de96513ba9 Extracting [>                                                  ]  65.54kB/3.85MB
+ e2de96513ba9 Extracting [==================================================>]   3.85MB/3.85MB
+ e2de96513ba9 Extracting [==================================================>]   3.85MB/3.85MB
+ e2de96513ba9 Pull complete 
+ d9aae54b5831 Extracting [>                                                  ]  32.77kB/1.931MB
+ d9aae54b5831 Extracting [==================================================>]  1.931MB/1.931MB
+ d9aae54b5831 Extracting [==================================================>]  1.931MB/1.931MB
+ d9aae54b5831 Pull complete 
+ 6c53d0b2a666 Extracting [==================================================>]     629B/629B
+ 6c53d0b2a666 Extracting [==================================================>]     629B/629B
+ 6c53d0b2a666 Pull complete 
+ 745dfb2690dd Downloading [==================================================>]     965B/965B
+ 745dfb2690dd Verifying Checksum 
+ 745dfb2690dd Download complete 
+ 745dfb2690dd Extracting [==================================================>]     965B/965B
+ 745dfb2690dd Extracting [==================================================>]     965B/965B
+ 745dfb2690dd Pull complete 
+ 9a9a644fdd6a Downloading [==================================================>]     404B/404B
+ 9a9a644fdd6a Verifying Checksum 
+ 9a9a644fdd6a Download complete 
+ 9a9a644fdd6a Extracting [==================================================>]     404B/404B
+ 9a9a644fdd6a Extracting [==================================================>]     404B/404B
+ 9a9a644fdd6a Pull complete 
+ 64c8194480fe Downloading [==================================================>]   1.21kB/1.21kB
+ 64c8194480fe Verifying Checksum 
+ 64c8194480fe Download complete 
+ 64c8194480fe Extracting [==================================================>]   1.21kB/1.21kB
+ 64c8194480fe Extracting [==================================================>]   1.21kB/1.21kB
+ 64c8194480fe Pull complete 
+ e76228b47809 Downloading [==================================================>]    1.4kB/1.4kB
+ e76228b47809 Verifying Checksum 
+ e76228b47809 Download complete 
+ e76228b47809 Extracting [==================================================>]    1.4kB/1.4kB
+ e76228b47809 Extracting [==================================================>]    1.4kB/1.4kB
+ e76228b47809 Pull complete 
+ e72112c14215 Downloading [>                                                  ]  212.4kB/20.53MB
+ e72112c14215 Downloading [=>                                                 ]  425.4kB/20.53MB
+ e72112c14215 Downloading [==>                                                ]  851.4kB/20.53MB
+ e72112c14215 Downloading [===>                                               ]   1.49MB/20.53MB
+ e72112c14215 Downloading [======>                                            ]  2.555MB/20.53MB
+ e72112c14215 Downloading [==========>                                        ]  4.259MB/20.53MB
+ e72112c14215 Downloading [================>                                  ]  6.815MB/20.53MB
+ e72112c14215 Downloading [======================>                            ]  9.158MB/20.53MB
+ e72112c14215 Downloading [===========================>                       ]  11.29MB/20.53MB
+ e72112c14215 Downloading [=================================>                 ]  13.84MB/20.53MB
+ e72112c14215 Downloading [=======================================>           ]  16.19MB/20.53MB
+ e72112c14215 Downloading [============================================>      ]  18.32MB/20.53MB
+ e72112c14215 Verifying Checksum 
+ e72112c14215 Download complete 
+ e72112c14215 Extracting [>                                                  ]  229.4kB/20.53MB
+ e72112c14215 Extracting [==============================>                    ]  12.39MB/20.53MB
+ e72112c14215 Extracting [==================================================>]  20.53MB/20.53MB
+ e72112c14215 Pull complete 
+ a1proxy Pulled 
+ Container ric_a1proxy  Creating
+ Container ric_a1proxy  Created
+ Container ric_a1proxy  Starting
+ Container ric_a1proxy  Started
