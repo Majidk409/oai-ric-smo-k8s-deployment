@@ -1,0 +1,16 @@
+{
+  "config": {
+    "ric": [
+      {
+        "name": "ric-nearrt",
+        "baseUrl": "http://10.230.4.43:32080/a1mediator",
+        "managedElementIds": ["oai-gnb"]
+      },
+      {
+        "name": "ric-sim",
+        "baseUrl": "http://a1-sim-osc-0.a1-sim:8085",
+        "managedElementIds": ["sim"]
+      }
+    ]
+  }
+}
