@@ -17,7 +17,7 @@ of this repository is a copy of other material found on the machine (see the top
 |---|---|---|
 | 1 | [01_CREATE_VMS.md](01_CREATE_VMS.md) | two Ubuntu 20.04 VMs with lab IPs, campus internet login |
 | 2 | [02_NEAR_RT_RIC.md](02_NEAR_RT_RIC.md) | Near-RT RIC running; E2 and A1 reachable from the lab |
-| 3 | [03_NON_RT_RIC.md](03_NON_RT_RIC.md) | Non-RT RIC running; A1 to the Near-RT RIC `AVAILABLE` |
+| 3 | [03_NON_RT_RIC.md](03_NON_RT_RIC.md) | Non-RT RIC running; **a real A1 policy delivered** to the Near-RT RIC |
 
 **Files:**
 

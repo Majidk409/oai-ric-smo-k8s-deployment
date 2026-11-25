@@ -1,0 +1,35 @@
+# Extra A1 route for the Non-RT RIC policy service (O-RAN SC "OSC_V1" client calls /a1-p/...):
+#   /a1osc/a1-p/<rest>  ->  a1mediator /A1-P/v2/<rest>
+apiVersion: v1
+kind: Service
+metadata:
+  name: a1mediator-oscv1
+  namespace: ricplt
+  annotations:
+    konghq.com/path: /A1-P/v2
+spec:
+  selector: {"app":"ricplt-a1mediator","release":"r4-a1mediator"}
+  ports:
+    - name: http
+      port: 10000
+      targetPort: 10000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-a1mediator-oscv1
+  namespace: ricplt
+  annotations:
+    konghq.com/strip-path: "true"
+spec:
+  ingressClassName: kong
+  rules:
+    - http:
+        paths:
+          - path: /a1osc/a1-p
+            pathType: Prefix
+            backend:
+              service:
+                name: a1mediator-oscv1
+                port:
+                  number: 10000
